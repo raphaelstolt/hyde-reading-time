@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+* export-ignore
+
+config/       -export-ignore
+config/**     -export-ignore
+composer.json -export-ignore
+LICENSE.md    -export-ignore
+README.md     -export-ignore
+src/          -export-ignore
+src/**        -export-ignore

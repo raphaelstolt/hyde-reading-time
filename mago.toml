@@ -1,0 +1,32 @@
+version = "1"
+php-version = "8.2"
+
+[source]
+paths = ["src/"]
+includes = ["vendor"]
+excludes = []
+
+[linter]
+integrations = ["phpunit"]
+
+[linter.rules]
+ambiguous-function-call = { enabled = false }
+literal-named-argument = { enabled = false }
+cyclomatic-complexity = { threshold = 50 }
+kan-defect = { threshold = 2.5 }
+too-many-methods = { threshold = 25 }
+
+[analyzer]
+find-unused-definitions = true
+find-unused-expressions = false
+analyze-dead-code = false
+memoize-properties = true
+allow-possibly-undefined-array-keys = true
+check-throws = true
+check-missing-override = false
+find-unused-parameters = false
+strict-list-index-checks = false
+no-boolean-literal-comparison = false
+check-missing-type-hints = false
+register-super-globals = true
+ignore = ["non-existent-function", "mixed-argument", "mixed-assignment", "mixed-array-access", "mixed-return-statement", "mixed-operand", "possibly-invalid-argument"]
